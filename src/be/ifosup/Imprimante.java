@@ -12,17 +12,16 @@ public class Imprimante {
     }
 
     public void allumerImprimante(){
-        System.out.println("L'imprimante s'allume");
+        System.out.println("L'imprimante s'allume.\n");
     }
 
-    public void imprimerFeuilles(int nombre){
-
-        if (!toner.imprimerToner(nombre) bac.imprimerBac(nombre);
-        // en premier, prendre encre restant. Imprimer nombre de feuille possible
-        // si finit, finit.
-        // si pas assez encre, remettre encre
-        // si encre remise, refaire opé
-        // màj l'encre + feuilles restantes
+    public void imprimer(int nombre){
+        System.out.println("\nLancement de l'impression en cours...");
+        if (toner.verifierNiveauToner(nombre) && bac.verifierNombreFeuille(nombre)){
+            System.out.println("=== Impression réussie. Nombre de feuilles imprimées : " + nombre +" ===");
+            toner.imprimerToner(nombre);
+            bac.imprimerBac(nombre);
+        }
     }
 
     public void ajouterFeuilles(int nombre){
@@ -42,7 +41,7 @@ public class Imprimante {
     }
 
     public void eteindreImprimante(){
-        System.out.println("L'imprimante s'est éteinte.");
+        System.out.println("L'imprimante s'est éteinte.\n");
     }
 
 }
