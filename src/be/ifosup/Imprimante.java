@@ -16,7 +16,8 @@ public class Imprimante {
     }
 
     public void imprimerFeuilles(int nombre){
-        toner.imprimerToner(nombre);
+
+        if (!toner.imprimerToner(nombre) bac.imprimerBac(nombre);
         // en premier, prendre encre restant. Imprimer nombre de feuille possible
         // si finit, finit.
         // si pas assez encre, remettre encre

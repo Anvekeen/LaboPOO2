@@ -10,7 +10,9 @@ public class Bac {
         this.formatFeuille = formatFeuille;
     }
 
+    public boolean imprimerBac(int nombre){
 
+    }
 
     public void ajouterFeuilles(int nombre){
         nbFeuilles += nombre;
