@@ -9,26 +9,27 @@ public class Main {
         Bac unBac = new Bac(50, "A4");
         Imprimante uneAutreImprimante = new Imprimante("DCP-1612", unToner, unBac);
 
+
         uneImprimante.allumerImprimante();
         uneImprimante.ajouterFeuilles(-49);
         uneImprimante.ajouterFeuilles(10);
-        uneImprimante.imprimer(11);
-        uneImprimante.imprimer(50);
+        uneImprimante.imprimer(11, false);
+        uneImprimante.imprimer(50, true);
         uneImprimante.ajouterFeuilles(50);
-        uneImprimante.imprimer(50);
+        uneImprimante.imprimer(50, false);
         uneImprimante.eteindreImprimante();
         System.out.println("================= une autre imprimante ==================\n");
         uneAutreImprimante.allumerImprimante();
-        uneAutreImprimante.ajouterFeuilles(150);
-        uneAutreImprimante.imprimer(25);
-        uneAutreImprimante.imprimer(1);
+        uneAutreImprimante.ajouterFeuilles(75);
+        uneAutreImprimante.imprimer(25, false);
+        uneAutreImprimante.imprimer(1, false);
         uneAutreImprimante.retirerFeuilles(20);
         uneAutreImprimante.changerTonerNiveauAIndiquer(20);
-        uneAutreImprimante.imprimer(21);
+        uneAutreImprimante.imprimer(20, true);
         uneAutreImprimante.changerTonerNeuf();
-        uneAutreImprimante.imprimer(31);
+        uneAutreImprimante.imprimer(31, true);
         uneAutreImprimante.changerTonerNiveauAIndiquer(40);
-        uneAutreImprimante.imprimer(40);
+        uneAutreImprimante.imprimer(40, false);
         uneAutreImprimante.eteindreImprimante();
     }
 }
